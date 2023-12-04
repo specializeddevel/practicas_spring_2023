@@ -1,25 +1,29 @@
 package org.csra.historiaClinica.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.persistence.criteria.CriteriaBuilder;
 
 import java.util.Date;
 
 @Entity
+@Table(name = "Persona")
 public class Persona {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+    @Column(length = 50, nullable = false)
     private String firstName;
+    @Column(length = 50, nullable = true)
     private String middleName;
+    @Column(length = 50, nullable = false)
     private String lastName;
+    @Column(nullable = false)
     private Integer dni;
+    @Column(nullable = false)
     private Integer cellPhoneNumber;
+    @Temporal(TemporalType.DATE)
     private Date dob;
     private String Occupation;
     private String city;
