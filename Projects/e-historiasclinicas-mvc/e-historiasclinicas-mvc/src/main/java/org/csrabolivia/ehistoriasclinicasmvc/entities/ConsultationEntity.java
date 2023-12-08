@@ -40,8 +40,8 @@ public class ConsultationEntity {
     @Column(name = "consultation_cause", nullable = false, length = 500)
     private String consultationCause;
 
-    @Column(name = "actual_disease_story", nullable = false, length = 500)
-    private String actualDiseaseStory;
+    @Column(name = "actual_disease_history", nullable = false, length = 500)
+    private String actualDiseaseHistory;
 
     @ManyToOne
     @JoinColumn(name = "id_patient", referencedColumnName = "id_patient", insertable = false, updatable = false)

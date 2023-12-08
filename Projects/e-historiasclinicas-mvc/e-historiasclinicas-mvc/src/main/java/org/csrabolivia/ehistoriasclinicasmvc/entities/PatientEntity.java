@@ -75,4 +75,8 @@ public class PatientEntity {
     @OneToMany(mappedBy = "patient")
     private Set<ConsultationEntity> consultations;
 
+    @ManyToMany
+    @JoinTable(name = "patient_surgical_bg", joinColumns = @JoinColumn(name = "id_patient"), inverseJoinColumns = @JoinColumn(name = "id_surgical_bg"))
+    private Set<SurgicalBackgroundDataEntity> surgicalBackgrounds;
+
 }
