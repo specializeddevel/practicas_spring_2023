@@ -4,6 +4,7 @@ import jakarta.transaction.Transactional;
 import org.csrabolivia.biblioteca.entidades.Autor;
 import org.csrabolivia.biblioteca.entidades.Editorial;
 import org.csrabolivia.biblioteca.entidades.Libro;
+import org.csrabolivia.biblioteca.excepciones.MiException;
 import org.csrabolivia.biblioteca.repositorios.AutorRepositorio;
 import org.csrabolivia.biblioteca.repositorios.EditoriaRepositorio;
 import org.csrabolivia.biblioteca.repositorios.LibroRepositorio;
@@ -27,7 +28,10 @@ public class LibroServicio {
     private EditoriaRepositorio editoriaRepositorio;
 
     @Transactional
-    public void crearLibro(Long isbn, String titulo, Integer ejemplares, String idAutor, String idEditorial){
+    public void crearLibro(Long isbn, String titulo, Integer ejemplares, String idAutor, String idEditorial) throws MiException {
+
+
+        validar(isbn, titulo, idAutor, idEditorial, ejemplares);
 
         Autor autor = autorRepositorio.findById(idAutor).get();
         Editorial editorial = editoriaRepositorio.findById(idEditorial).get();
@@ -55,7 +59,10 @@ public class LibroServicio {
 
     }
 
-    public void modificarLibro(Long isbn, String titulo, String idAutor, String idEditorial, Integer ejemplares){
+    @Transactional
+    public void modificarLibro(Long isbn, String titulo, String idAutor, String idEditorial, Integer ejemplares) throws MiException{
+
+        validar(isbn, titulo, idAutor, idEditorial, ejemplares);
 
         Optional<Libro> respuestaLibro = libroRepositorio.findById(isbn);
         Optional<Autor> respuestaAutor = autorRepositorio.findById(idAutor);
@@ -90,6 +97,37 @@ public class LibroServicio {
         }
     }
 
+    private void validar(Long isbn, String titulo, String idAutor, String idEditorial, Integer ejemplares) throws MiException{
+        if(isbn == null){
+
+            throw new MiException("Debe otorgarse el ISBN");
+
+        }
+
+        if(titulo.isEmpty() || titulo == null){
+
+            throw new MiException("Debe otorgarse el Titulo del libro");
+
+        }
+
+        if(ejemplares == null){
+
+            throw new MiException("Debe otorgarse la cantidad de libros");
+
+        }
+
+        if(idAutor.isEmpty() || idAutor == null){
+
+            throw new MiException("Debe otorgarse el ID del autor");
+
+        }
+
+        if(idEditorial.isEmpty() || idEditorial == null){
+
+            throw new MiException("Debe otorgarse el ID de la editorial");
+
+        }
+    }
 
 
 
