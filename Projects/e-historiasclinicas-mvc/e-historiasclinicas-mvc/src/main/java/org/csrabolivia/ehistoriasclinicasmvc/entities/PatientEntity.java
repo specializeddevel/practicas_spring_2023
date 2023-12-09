@@ -69,14 +69,15 @@ public class PatientEntity {
     @Column(name = "aditional_notes", length = 250)
     private String aditionalNotes;
 
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "registration_date", nullable = false)
+    private Date registrationDate;
+
     @Column(columnDefinition = "TINYINT")
     private Boolean deleted;
 
     @OneToMany(mappedBy = "patient")
     private Set<ConsultationEntity> consultations;
 
-    @ManyToMany
-    @JoinTable(name = "patient_surgical_bg", joinColumns = @JoinColumn(name = "id_patient"), inverseJoinColumns = @JoinColumn(name = "id_surgical_bg"))
-    private Set<SurgicalBackgroundDataEntity> surgicalBackgrounds;
 
 }

@@ -29,10 +29,10 @@ public class SurgicalBackgroundDataEntity {
     @Column(name = "id_surgical_bg", nullable = false)
     private Integer idSurgicalBg;
 
-    @Column(name = "surgical_bg_description", nullable = false, length = 150)
+    @Column(name = "description", nullable = false, length = 150)
     private String descriptionBgDescription;
 
-    @ManyToMany(mappedBy = "surgicalBackgrounds")
-    private Set<PatientEntity> patients;
+    /*@ManyToMany(mappedBy = "surgicalBackgrounds")
+    private Set<PatientEntity> patients;*/
 
 }
