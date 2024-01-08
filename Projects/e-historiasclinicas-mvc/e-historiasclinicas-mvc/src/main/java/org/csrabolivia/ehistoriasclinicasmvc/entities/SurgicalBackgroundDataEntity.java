@@ -32,7 +32,9 @@ public class SurgicalBackgroundDataEntity {
     @Column(name = "description", nullable = false, length = 150)
     private String descriptionBgDescription;
 
-    /*@ManyToMany(mappedBy = "surgicalBackgrounds")
-    private Set<PatientEntity> patients;*/
+    @OneToMany(mappedBy = "surgicalBackgrounds")
+    private Set<PatientSurgicalBackgroundRel> surgicalBackgroundData;
+
+
 
 }

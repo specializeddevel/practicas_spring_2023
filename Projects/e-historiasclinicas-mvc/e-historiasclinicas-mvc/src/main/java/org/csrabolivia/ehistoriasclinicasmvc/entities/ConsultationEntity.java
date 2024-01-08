@@ -6,10 +6,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "consultation")
-@IdClass(ConsultationEntityId.class)
 @Getter
 @Setter
 @NoArgsConstructor
@@ -25,9 +25,6 @@ public class ConsultationEntity {
     @Column(name = "id_consultation", nullable = false)
     private Integer idConsultation;
 
-    @Id
-    @Column(name = "id_patient", nullable = false)
-    private Integer idPatient;
 
     @Column(name = "consultation_date", nullable = false)
     @Temporal(TemporalType.DATE)
@@ -47,6 +44,13 @@ public class ConsultationEntity {
     @JoinColumn(name = "id_patient", referencedColumnName = "id_patient", insertable = false, updatable = false)
     private PatientEntity patient;
 
+    @OneToMany(mappedBy = "idDiagnosis")
+    private Set<ConsultationDiagnosisEntity> diagnostics;
 
+    @OneToOne(mappedBy = "consultation")
+    private ConsultationComplementaryTestsEntity complementaryTest;
+
+    @OneToOne(mappedBy = "consultation")
+    private ConsultationGeneralPhysicalExaminationEntity generalPhysicalExamination;
 
 }

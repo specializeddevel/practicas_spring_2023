@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "liname_data")
 @Getter
@@ -47,5 +49,8 @@ public class LinameDataEntity {
 
     @Column(name = "notes", nullable = false, length = 500)
     private String notes;
+
+    @OneToMany(mappedBy = "medicationHistories")
+    private Set<PatientMedicationHistoryRel> medicationHistoriesData;
 
 }

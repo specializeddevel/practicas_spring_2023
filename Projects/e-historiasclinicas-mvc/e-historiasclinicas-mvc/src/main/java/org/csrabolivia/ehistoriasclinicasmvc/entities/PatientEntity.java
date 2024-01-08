@@ -38,6 +38,9 @@ public class PatientEntity {
     @Column(name = "cell_phone_number", length = 10)
     private String cellPhoneNumber;
 
+    @Column(name = "id_sex", nullable = false)
+    private Integer idSex;
+
     @Temporal(TemporalType.DATE)
     @Column(name = "date_of_birth", nullable = false)
     private Date dateOfBirth;
@@ -78,6 +81,31 @@ public class PatientEntity {
 
     @OneToMany(mappedBy = "patient")
     private Set<ConsultationEntity> consultations;
+
+    @OneToOne(mappedBy = "patient")
+    private PatientObstetricAndGinecologicHistoryEntity patientObstetricAndGinecologicData;
+
+    @ManyToOne
+    @JoinColumn(name = "id_sex", referencedColumnName = "id_sex", insertable = false, updatable = false)
+    private SexDataEntity sexData;
+
+    @OneToMany(mappedBy = "patient")
+    private Set<PatientFamilyHistoryRel> patientFamilyHistory;
+
+    @OneToMany(mappedBy = "patient")
+    private Set<PatientMedicationHistoryRel> patientMedicationHistory;
+
+    @OneToMany(mappedBy = "patient")
+    private Set<PatientNonPathologicalHistoryRel> patientNonPathologicalHistory;
+
+    @OneToMany(mappedBy = "patient")
+    private Set<PatientPathologicHistoryRel> patientPathologicHistory;
+
+    @OneToMany(mappedBy = "patient")
+    private Set<PatientSurgicalBackgroundRel> patientSurgicalBackground;
+
+    @OneToMany(mappedBy = "patient")
+    private Set<PatientAllergicHistoryRel> patientAllergicHistory;
 
 
 }

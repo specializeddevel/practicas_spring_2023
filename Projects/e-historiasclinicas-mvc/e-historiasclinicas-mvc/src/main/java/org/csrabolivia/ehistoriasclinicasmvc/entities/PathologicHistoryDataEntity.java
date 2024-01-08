@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "pathologic_history_data")
 @Getter
@@ -26,6 +28,9 @@ public class PathologicHistoryDataEntity {
 
     @Column(name = "description", nullable = false, length = 150)
     private String descriptionPathologicHist;
+
+    @OneToMany(mappedBy = "pathologicHistories")
+    private Set<PatientPathologicHistoryRel> patientPathologicHistoryData;
 
 
 }

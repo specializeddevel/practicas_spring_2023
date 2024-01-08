@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "family_history_data")
 @Getter
@@ -27,5 +29,7 @@ public class FamilyHistoryDataEntity {
     @Column(name = "description", nullable = false, length = 150)
     private String descriptionFamilyHist;
 
+    @OneToMany(mappedBy = "familyHistories")
+    private Set<PatientFamilyHistoryRel> patientFamilyHistoryData;
 
 }

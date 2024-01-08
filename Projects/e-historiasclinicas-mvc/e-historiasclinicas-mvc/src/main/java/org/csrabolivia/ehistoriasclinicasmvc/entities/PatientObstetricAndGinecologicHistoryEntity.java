@@ -56,6 +56,17 @@ public class PatientObstetricAndGinecologicHistoryEntity {
     @Column(name = "last_pap_date")
     private Date lastPapDate;
 
+    @Column(name = "id_contraceptive_method",  columnDefinition = "SMALLINT", nullable = false)
+    private Integer idContraceptiveMethod;
+
+    @OneToOne
+    @JoinColumn(name="id_patient", referencedColumnName = "id_patient", insertable = false, updatable = false)
+    private PatientEntity patient;
+
+    @ManyToOne
+    @JoinColumn(name = "id_contraceptive_method", referencedColumnName = "id_contraceptive_method", updatable = false, insertable = false)
+    private ContraceptiveMethodDataEntity contraceptiveMethod;
+
 
 
 }
