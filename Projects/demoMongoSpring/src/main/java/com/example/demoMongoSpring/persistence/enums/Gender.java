@@ -1,2 +1,5 @@
-package com.example.demoMongoSpring.persistence.enums;public enum Gender {
+package com.example.demoMongoSpring.persistence.enums;
+
+public enum Gender {
+    MALE, FEMALE
 }
