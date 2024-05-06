@@ -1,8 +1,8 @@
 name: Stats
 
 on:
-  push:
-    branches: [ main ]
+  schedule:
+    - cron: '33 10,20 * * *'
 
 jobs:
   build:
