@@ -13,15 +13,15 @@ jobs:
 
     steps:
       - name: Checkout repo
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Setup Python
-      - uses: actions/setup-python@v5
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Run script
-      - run: python ./Projects/e-historiasclinicas-mvc/e-historiasclinicas-mvc/stats.py
+        run: python ./Projects/e-historiasclinicas-mvc/e-historiasclinicas-mvc/stats.py
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
