@@ -1,0 +1,32 @@
+name: Stats
+
+on:
+  schedule:
+    - cron: '33 10,20 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run script
+        run: python ./Projects/e-historiasclinicas-mvc/e-historiasclinicas-mvc/stats.py
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Automated Change
+          commit_user_name: Raul Burgos Murray [Github Actions]
+          commit_user_email: specializeddevel@gmail.com
+          commit_author: Raul Burgos Murray

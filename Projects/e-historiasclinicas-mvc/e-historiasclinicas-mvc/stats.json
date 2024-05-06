@@ -1,0 +1,215 @@
+{
+    "challenges_total": 0,
+    "languages_total": 5,
+    "files_total": 31,
+    "users_total": 29,
+    "challenges_ranking": [],
+    "languages_ranking": [
+        {
+            "order": 1,
+            "name": "entities",
+            "count": 22,
+            "percentage": 70.97
+        },
+        {
+            "order": 2,
+            "name": "e-historiasclinicas-mvc",
+            "count": 4,
+            "percentage": 12.9
+        },
+        {
+            "order": 3,
+            "name": "wrapper",
+            "count": 2,
+            "percentage": 6.45
+        },
+        {
+            "order": 4,
+            "name": "ehistoriasclinicasmvc",
+            "count": 2,
+            "percentage": 6.45
+        },
+        {
+            "order": 5,
+            "name": "resources",
+            "count": 1,
+            "percentage": 3.23
+        }
+    ],
+    "users_ranking": [
+        {
+            "order": 1,
+            "name": "mvnw",
+            "count": 2,
+            "languages": 1
+        },
+        {
+            "order": 2,
+            "name": "maven-wrapper",
+            "count": 2,
+            "languages": 1
+        },
+        {
+            "order": 3,
+            "name": "pom",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 4,
+            "name": ".gitignore",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 5,
+            "name": "application",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 6,
+            "name": "ehistoriasclinicasmvcapplication",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 7,
+            "name": "consultationentityid",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 8,
+            "name": "nonpathologichistorydataentity",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 9,
+            "name": "surgicalbackgrounddataentity",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 10,
+            "name": "patiententity",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 11,
+            "name": "patientmedicationhistoryrel",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 12,
+            "name": "familyhistorydataentity",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 13,
+            "name": "consultationcomplementarytestsentity",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 14,
+            "name": "patientfamilyhistoryrel",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 15,
+            "name": "patientobstetricandginecologichistoryentity",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 16,
+            "name": "patientsurgicalbackgroundrel",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 17,
+            "name": "contraceptivemethoddataentity",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 18,
+            "name": "allergichistorydataentity",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 19,
+            "name": "sexdataentity",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 20,
+            "name": "patientallergichistoryrel",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 21,
+            "name": "patientpathologichistoryrel",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 22,
+            "name": "consultationdiagnosisentity",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 23,
+            "name": "cie10dataentity",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 24,
+            "name": "consultationentity",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 25,
+            "name": "linamedataentity",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 26,
+            "name": "patientnonpathologicalhistoryrel",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 27,
+            "name": "consultationgeneralphysicalexaminationentity",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 28,
+            "name": "pathologichistorydataentity",
+            "count": 1,
+            "languages": 1
+        },
+        {
+            "order": 29,
+            "name": "ehistoriasclinicasmvcapplicationtests",
+            "count": 1,
+            "languages": 1
+        }
+    ]
+}
